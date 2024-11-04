@@ -14,17 +14,17 @@
     </a>
     <div class="hidden lg:block">
       <ul class="flex flex-col gap-2 mt-2 mb-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-        <li class="flex items-center p-1 text-md gap-x-2 text-gray-200">
+        <li class="flex items-center p-3 text-gray-300 rounded-lg bg-slate-900 dark:text-white hover:bg-gray-700 dark">
           <a href="../pages/login" class="flex items-center">
             Home
           </a>
         </li>
-        <li class="flex items-center p-1 text-md gap-x-2 text-gray-200">
+        <li class="flex items-center p-3 text-gray-300 rounded-lg bg-slate-900 dark:text-white hover:bg-gray-700 dark">
           <a href="../pages/about" class="flex items-center">
             About
           </a>
         </li>
-        <li class="flex items-center p-1 text-md gap-x-2 text-gray-200">
+        <li class="flex items-center p-3 text-gray-300 rounded-lg bg-slate-900 dark:text-white hover:bg-gray-700 dark">
           <a href="../pages/contact" class="flex items-center">
             Contacts
           </a>

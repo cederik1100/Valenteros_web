@@ -18,27 +18,27 @@
                 </a>
 
                 <li>
-                    <a href="<?= site_url('pages/tasks')?>" class="flex items-center p-2 text-gray-200 rounded-lg bg-slate-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-100 group">
+                    <a href="<?= site_url('pages/tasks')?>" class="flex items-center p-2 text-gray-200 rounded-lg bg-slate-800 dark:text-gray-300 hover:bg-gray-700 dark">
                         <span class="ms-3">Todo</span>
                     </a>
                 </li>
                 <li>
-                <a href="<?= site_url('pages/profile/' . session()->get('id')) ?>" class="flex items-center p-2 text-gray-200 rounded-lg bg-slate-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                <a href="<?= site_url('pages/profile/' . session()->get('id')) ?>" class="flex items-center p-2 text-gray-200 rounded-lg bg-slate-800 dark:text-white hover:bg-gray-700 dark">
                         <span class="ms-3">Profile</span>
                     </a>
                 </li>
                 <li>
-                    <a href="<?= site_url('pages/settings')?>" class="flex items-center p-2 text-gray-200 rounded-lg bg-slate-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-100 group">
+                    <a href="<?= site_url('pages/settings')?>" class="flex items-center p-2 text-gray-200 rounded-lg bg-slate-800 dark:text-white hover:bg-gray-700 dark">
                         <span class="ms-3">Settings</span>
                     </a>
                 </li>
                 <li>
-                    <a href="<?= site_url('pages/history')?>" class="flex items-center p-2 text-gray-200 rounded-lg bg-slate-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-100 group">
+                    <a href="<?= site_url('pages/history')?>" class="flex items-center p-2 text-gray-200 rounded-lg bg-slate-800 dark:text-white hover:bg-gray-700 dark">
                         <span class="ms-3">History</span>
                     </a>
                 </li>
                 <li>
-                    <a href="<?= base_url('auth/logout')?>" class="flex items-center p-2 text-gray-200 rounded-lg bg-slate-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-100 group">
+                    <a href="<?= base_url('auth/logout')?>" class="flex items-center p-2 text-gray-200 rounded-lg bg-slate-800 dark:text-white hover:bg-gray-700 dark">
                         <span class="ms-3">Logout</span>
                     </a>
                 </li>
