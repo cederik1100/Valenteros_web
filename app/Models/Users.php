@@ -14,4 +14,8 @@ class Users extends Model
         'username', 
         'password'];
    
+        public function updateUser($id, $data)
+        {
+            return $this->where('id', $id)->set($data)->update();
+        }
 }

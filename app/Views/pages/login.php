@@ -13,13 +13,18 @@
     <h1 class="text-xl font-bold text-center text-gray-300 dark:text-gray-200 mb-8">Login</h1>
 
     <!-- Error Display -->
+     
     <?php if (session()->has('error')): ?>
+      <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative">
+        <ul>
     <div class="alert alert-danger">
         <?= esc(session('error')) ?>
     </div>
+        </ul>
+      </div>
     <?php endif; ?>
     
-    <form action="<?= base_url('auth/login')?>" method="post" class="w-full flex flex-col gap-4">
+    <form action="<?= base_url('pages/login')?>" method="post" class="w-full flex flex-col gap-4">
     <?= csrf_field() ?> 
 
       <div class="flex items-start flex-col justify-start">
@@ -32,6 +37,11 @@
         <input type="password" id="password" name="password" class="w-full px-3 dark:text-gray-200 dark:bg-gray-900 py-2 rounded-md border border-gray-300 dark:border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500">
       </div>
 
+      <div class="flex items-center mt-2">
+                <input type="checkbox" id="togglePassword" class="mr-2">
+                <label for="togglePassword" class="text-sm font-medium text-gray-300">Show Password</label>
+            </div>
+
       <button type="submit" class="bg-blue-400 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-md shadow-sm">Login</button>
     </form>
 
@@ -41,5 +51,13 @@
     </div>
     </form>
   </div>
+  <script>
+        // Toggle password visibility
+        document.getElementById('togglePassword').addEventListener('change', function () {
+            const passwordField = document.getElementById('password'); 
+            const type = this.checked ? 'text' : 'password';
+            passwordField.type = type;
+        });
+    </script>
 </body>
 </html>

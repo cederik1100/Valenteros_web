@@ -13,7 +13,8 @@ class Validation extends BaseConfig
     // --------------------------------------------------------------------
     // Setup
     // --------------------------------------------------------------------
-
+    public $errorPrefix = '<div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">';
+    public $errorSuffix = '</div>';
     /**
      * Stores the classes that contain the
      * rules that are available.

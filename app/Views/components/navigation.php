@@ -15,7 +15,7 @@
     <div class="hidden lg:block">
       <ul class="flex flex-col gap-2 mt-2 mb-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
         <li class="flex items-center p-1 text-md gap-x-2 text-gray-200">
-          <a href="../auth/login" class="flex items-center">
+          <a href="../pages/login" class="flex items-center">
             Home
           </a>
         </li>

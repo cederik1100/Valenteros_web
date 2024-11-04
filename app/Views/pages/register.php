@@ -20,7 +20,7 @@
             </div>
         <?php endif; ?>
     
-    <form action="<?= base_url('auth/register'); ?>" method ="POST" class="w-full flex flex-col gap-4">
+    <form action="<?= base_url('pages/register'); ?>" method ="POST" class="w-full flex flex-col gap-4">
     <?= csrf_field() ?>
 
       <div class="flex items-start flex-col justify-start">
@@ -47,6 +47,11 @@
         <label for="confirmPassword" class="text-sm text-gray-300 dark:text-gray-200 mr-2">Confirm Password:</label>
         <input type="password" id="confirmPassword" name="confirmPassword" class="w-full px-3 dark:text-gray-200 dark:bg-gray-900 py-2 rounded-md border border-gray-300 dark:border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500">
       </div>
+                      
+      <div class="flex items-center mt-2">
+                <input type="checkbox" id="togglePassword" class="mr-2">
+                <label for="togglePassword" class="text-sm font-medium text-gray-300">Show Password</label>
+            </div>
 
       <button type="submit" class="bg-blue-400 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-md shadow-sm">Register</button>
     </form>
@@ -57,5 +62,15 @@
     </div>
     </form>
   </div>
+  <script>
+        // Toggle password visibility
+        document.getElementById('togglePassword').addEventListener('change', function () {
+            const passwordField = document.getElementById('password');
+            const confirmPasswordField = document.getElementById('confirmPassword');  
+            const type = this.checked ? 'text' : 'password';
+            passwordField.type = type;
+            confirmPasswordField.type = type;
+        });
+    </script>
 </body>
 </html>
