@@ -19,6 +19,7 @@ This is a login-protected To-Do List application built with CodeIgniter 4 (CI4).
 ```bash
 git clone https://github.com/yourusername/todolist-ci4.git
 cd todolist-ci4
+```
 
 # Make sure you have Composer installed, then run:
 composer install
@@ -39,7 +40,7 @@ php spark migrate
 # Start the development server with:
 php spark serve
 
-# The application will be available at http://localhost:8080.
+## The application will be available at http://localhost:8080.
 
 # Usage
 # Register a new account.
