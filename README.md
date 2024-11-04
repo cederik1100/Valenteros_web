@@ -50,14 +50,14 @@ php spark migrate
 
 # The application will be available at http://localhost:8080.
 
--Usage
--Register a new account.
--Log in with your credentials.
--Create, view, update, or delete tasks from your to-do list.
--Folder Structure
--app/Controllers: Contains the main application controllers (Login, Register, ToDo).
--app/Models: Contains database models for Users and Tasks.
--app/Views: Contains the views for pages like login, registration, and the task list.
+- Usage
+- Register a new account.
+- Log in with your credentials.
+- Create, view, update, or delete tasks from your to-do list.
+- Folder Structure
+- app/Controllers: Contains the main application controllers (Login, Register, ToDo).
+- app/Models: Contains database models for Users and Tasks.
+- app/Views: Contains the views for pages like login, registration, and the task list.
 
 
 
