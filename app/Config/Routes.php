@@ -7,48 +7,64 @@ use CodeIgniter\Router\RouteCollection;
  */
 
 // Views
-$routes->get('/', 'Home::index');
+// $routes->get('/', 'Home::index');
 
 // Pages
-$routes->get('pages/about', 'Pages::about');
-$routes->get('pages/contact', 'Pages::contact');
+$routes->get('about', 'Pages::about');
+$routes->get('contacts', 'Pages::contacts');
+$routes->post('contacts', 'Pages::emailContacts');
+
+// Reset Password
+$routes->post('resetPassword', 'Auth::emailForgotPassword');
+$routes->get('resetPassword', 'Auth::resetPassword');
+$routes->post('updatePassword', 'Auth::updatePassword');
+
+
+
+
 
 // Register
-$routes->get('pages/register', 'Auth::showRegister');
-$routes->post('pages/register', 'Auth::register');
+$routes->post('register', 'Auth::showRegister');
+$routes->post('register', 'Auth::register');
 
 // Login
-$routes->get('pages/login', 'Auth::showLogin');
-$routes->post('pages/login', 'Auth::login');
+$routes->get('/', 'Auth::showLogin');
+$routes->post('/', 'Auth::login');
 
 // Profile
-$routes->get('pages/profile/(:num)', 'Profile::index/$1');
+$routes->get('profile/(:num)', 'Profile::index/$1');
 
 // Settings
-$routes->get('pages/settings', 'Settings::index');
-$routes->post('/settings/update', 'Settings::update');
+$routes->get('settings', 'Settings::index');
 
-// History
-$routes->get('pages/history', 'LoginHistory::showLoginHistory');
+$routes->get('editProfile', 'Settings::showEditProfile');
+$routes->post('editProfile', 'Settings::editProfile');
+$routes->get('editPassword', 'Settings::showEditPassword');
+$routes->post('editPassword', 'Settings::editPassword');
 
-// Logout
-$routes->get('auth/logout', 'Auth::logout');
+
 
 
 
 // Tasks
-$routes->get('pages/tasks', 'TaskController::index');
+$routes->get('tasks', 'TaskController::index');
 
 // Create
-$routes->get('pages/create', 'TaskController::create');
-$routes->post('pages/create', 'TaskController::store');
+$routes->get('create', 'TaskController::create');
+$routes->post('create', 'TaskController::store');
 
 // Edit Task
-$routes->get('pages/edit/(:num)', 'TaskController::edit/$1'); 
-$routes->post('pages/update/(:num)', 'TaskController::update/$1');
+$routes->get('edit/(:num)', 'TaskController::edit/$1');
+$routes->post('update/(:num)', 'TaskController::update/$1');
 
 // Update Task Status
-$routes->post('pages/tasks', 'TaskController::updateStatus');
+$routes->post('tasks', 'TaskController::updateStatus');
 
 // Delete task
-$routes->post('pages/delete/(:num)', 'TaskController::delete/$1');
+$routes->post('delete/(:num)', 'TaskController::delete/$1');
+
+// History
+$routes->get('history', 'LoginHistory::showLoginHistory');
+
+// Logout
+$routes->get('logout', 'Auth::logout');

@@ -10,6 +10,9 @@ class LoginHistory extends BaseController
 {
     public function showLoginHistory()
     {
+        if (!session()->get('isLoggedIn')) {
+            return redirect()->to('/')->with('error', 'You must be logged in to access this page.');
+        }
         // Assuming you store the user ID in session after logging in
         $userId = session()->get('id');
 
@@ -25,6 +28,6 @@ class LoginHistory extends BaseController
         }
 
         // Load the view with user-specific login history
-        return view('pages/login_history', $data);
+        return view('logged/login_history', $data);
     }
 }

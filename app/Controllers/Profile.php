@@ -5,10 +5,15 @@ namespace App\Controllers;
 use App\Controllers\BaseController;
 use CodeIgniter\HTTP\ResponseInterface;
 use App\Models\Users;
+
 class Profile extends BaseController
 {
     public function index($id)
     {
+        if (!session()->get('isLoggedIn')) {
+            return redirect()->to('/')->with('error', 'You must be logged in to access this page.');
+        }
+
         $userModel = new Users();
 
         // Fetch user data by ID
@@ -20,6 +25,6 @@ class Profile extends BaseController
         }
 
         // Pass user data to the view
-        return view('pages/profile', ['user' => $user]);
+        return view('logged/profile', ['user' => $user]);
     }
 }

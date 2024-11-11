@@ -10,7 +10,8 @@ class Users extends Model
     protected $primaryKey = 'id';
     protected $allowedFields = [
         'firstName', 
-        'lastName', 
+        'lastName',
+        'email', 
         'username', 
         'password'];
    

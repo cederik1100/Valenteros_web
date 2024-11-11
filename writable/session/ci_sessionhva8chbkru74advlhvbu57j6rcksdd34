@@ -1,0 +1,1 @@
+__ci_last_regenerate|i:1731051863;_ci_previous_url|s:32:"http://localhost:8080/index.php/";errors|a:2:{s:11:"newPassword";s:34:"The newPassword field is required.";s:15:"confirmPassword";s:38:"The confirmPassword field is required.";}__ci_vars|a:1:{s:6:"errors";s:3:"old";}
